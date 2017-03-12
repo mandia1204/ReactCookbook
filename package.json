@@ -23,7 +23,6 @@
     "json-loader": "^0.5.4",
     "lodash": "^4.15.0",
     "material-ui": "^0.16.4",
-    "mongoose": "^4.5.9",
     "node-sass": "^3.12.2",
     "react": "^15.4.0",
     "react-addons-test-utils": "^15.4.0",
@@ -47,7 +46,6 @@
     "babel-preset-react": "6.5.0",
     "babel-preset-react-hmre": "1.1.1",
     "babel-register": "6.8.0",
-    "colors": "1.1.2",
     "compression": "1.6.1",
     "cross-env": "1.0.7",
     "css-loader": "0.23.1",
@@ -76,6 +74,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "http://lim-gitlab/marvin.andia/cookbook"
+    "url": "https://github.com/mandia1204/ReactCookbook.git"
   }
 }
