@@ -35,7 +35,7 @@ class PastasPage extends React.Component {
 
     let loadChefButton = "";
     if(this.props.chefs.length==0)
-      loadChefButton = <button onClick={this.loadChefs}>Load chefs</button>
+      loadChefButton = <button onClick={this.loadChefs}>Load chefs</button>;
     return (
       <div>
         <BasePage title="Pastas" body={mybody} page="Pastas" />

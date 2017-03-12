@@ -3,13 +3,11 @@
   "version": "1.0.0",
   "description": "cookbook 2.0 react app",
   "scripts": {
-    "prestart": "babel-node server/startMessage.js",
-    "start": "npm-run-all --parallel open:api open:src lint:watch",
-    "open:api": "babel-node server/api/recipeApi.js",
-    "open:src": "babel-node server/server.js",
+    "start": "npm-run-all --parallel open:src lint:watch",
+    "open:src": "babel-node server.js",
     "lint": "node_modules/.bin/esw webpack.config.* src server",
     "lint:watch": "npm run lint -- --watch",
-    "test": "mocha --reporter progress server/testSetup.js \"src/**/*.test.js\"",
+    "test": "mocha --reporter progress testSetup.js \"src/**/*.test.js\"",
     "test:watch": "npm run test -- --watch"
   },
   "author": "",
