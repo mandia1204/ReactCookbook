@@ -1,4 +1,5 @@
 import webpack from 'webpack';
+import ExtractTextPlugin from 'extract-text-webpack-plugin';
 import path from 'path';
 
 export default {
@@ -22,12 +23,13 @@ export default {
         compress: {
             warnings: false
         }
-    })
+    }),
+    new ExtractTextPlugin("app.css")
   ],
   module: {
     loaders: [
-      {test: /\.js$/, include: path.join(__dirname, 'src'), loaders: ['babel']},
-      {test: /\.(scss|css)$/, loaders: ['style', 'css', 'sass']},
+      {test: /\.js$/, include: path.join(__dirname, 'src'), loader: 'babel-loader'},
+      {test: /\.(scss|css)$/, loader: ExtractTextPlugin.extract("style-loader", "css!sass-loader")},
       {test: /\.json$/, loader:"json-loader"},
       {test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: 'file'},
       {test: /\.(woff|woff2)$/, loader: 'url?prefix=font/&limit=5000'},
